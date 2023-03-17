@@ -10,6 +10,11 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms))
 var websites = require("./websites.json").website
 const webhookUrl = process.env.WEBHOOK_URL
 async function checkForChanges() {
+    const allowedTime = [0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 20]
+    const date = new Date()
+    if (!allowedTime.includes(date.getHours())) return console.log("Not allowed time", date.getHours())
+    var changes = []
+    try {
     const fetch = await import("node-fetch")
     for (let i = 0; i < websites.length; i++) {
         const {url,previousTitle,titleSelector,imageSelector,hrefSelector,requestOptions,authorSelector,contentSelector,color,extras,text,link,contentSelector2,} = websites[i]
@@ -22,8 +27,8 @@ async function checkForChanges() {
                 if ($(contentSelector).first().text() === previousTitle) continue
                 title = $(titleSelector).first().text()
                 image = imageSelector
-                    ? link +
-                      $(imageSelector.replace("%title%", title)).first().attr("src")
+                    ? (link +
+                      $(imageSelector).first().attr("src"))
                     : null
                 var hrefs = []
                 var contents = []
@@ -48,10 +53,11 @@ async function checkForChanges() {
                 if (title === previousTitle) continue
                 href = link + $(hrefSelector).first().attr("href")
                 content = $(contentSelector).first().text()
-                image = imageSelector ? link + $(imageSelector.replace("%title%", title)).first().attr("src") : null
+                try {image = imageSelector ? (link + $(imageSelector).first().attr("src")) : null} catch (error) {console.log(error)}    
                 websites[i].previousTitle = title
+                break
             default:
-                console.log("404")
+                console.log("404", url)
                 break
         }
 
@@ -83,6 +89,7 @@ async function checkForChanges() {
             }),
         })
         title += title + "\n"
+        changes.push(title)
         let data = FileSystem.readFileSync("./websites.json")
         data = JSON.parse(data)
         data.website[i].previousTitle = websites[i].previousTitle
@@ -90,7 +97,16 @@ async function checkForChanges() {
         FileSystem.writeFileSync("./websites.json", data)
 
     }
+    } catch (error) {
+        console.log(error)
+    }
+    if (changes.length > 0) {
+        console.log(changes.length + " changes found!", changes.join("\n"))
+    } else {
+        console.log("No changes found!")
+    }
 }
 app.get("/", (req, res) => res.send("Website monitor is running!"))
-app.listen(port, () => console.log(`Starting website monitor... ${port}!`))
+app.listen(port, () => console.log(`Website monitor is running! ${port}!`))
 setInterval(checkForChanges, interval);
+checkForChanges()

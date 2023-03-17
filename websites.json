@@ -1,1 +1,74 @@
-{"website":[{"url":"https://www.plzen.eu/o-meste/aktuality/aktuality-z-mesta/","previousTitle":"Plzeň má novou a moderní tramvajovou vozovnu","titleSelector":"a.inverted.title","imageSelector":"img[alt=`%title%`]","hrefSelector":"div.article.clear-after a:first-of-type","contentSelector":"div.article.clear-after p","color":"#ffec00","link":"https://www.plzen.eu","text":"<@&1085704420660084836>","extras":{"SELECTOR":"title"}},{"url":"https://www.plzen.eu/o-meste/aktuality/aktuality-z-obvodu/","previousTitle":"Děti z mateřinek Trojky poměřily síly ve čtyřech sportovních disciplínách","titleSelector":"a.inverted.title","imageSelector":null,"hrefSelector":"div.article.clear-after a:first-of-type"," contentSelector":"div.article.clear-after p","color":"#ffec00","link":"","text":"<@&1085704420660084836>","extras":{"authorSelector":"div.article.clear-after .author b","authorPrefix":"","obvody":{"1":"Mo1 - Severní Předměstí","2":"Mo2 - Slovany","3":"Mo3 - Centrum, Bory, Skvrňany","4":"Mo4 - Doubravka","5":"Mo5 - Křimice","6":"Mo6 - Litice","7":"Mo7 - Radčice","8":"Mo8 - Černice","9":"Mo9 - Malesice","10":"Mo10 - Lhota"},"role_obvod":["0","1085721846630072491","1085722035986120755","1085722090885369916","1085722137895112774","1085722274998526073","1085722324843630753","1085722401947517029","1085722462555218001","1085722500241035316","1085722551126343750"],"SELECTOR":"title"}},{"url":"https://www.visitplzen.eu/mesicni-program/","previousTitle":"\n\t\t\t\t\t\t\t\t\t\t\t\tBLIK x BLIK Lovci znaků \n                                                \n                                                    \n                                                \n                                            ","titleSelector":"div.h2 h2","hrefSelector":"div.event__text h3 a","contentSelector":"div.event__text h3 a","contentSelector2":"span.event__date","color":"#ffec00","link":"https://www.visitplzen.eu","text":"<@&1085956144197009418>","extras":{"SELECTOR":"content","TYPE":"LOOP"}}]}
+{
+    "website": [
+        {
+            "url": "https://www.plzen.eu/o-meste/aktuality/aktuality-z-mesta/",
+            "previousTitle": "Informace o vodě ve Velkém boleveckém rybníce jsou k dispozici na webu",
+            "titleSelector": "a.inverted.title",
+            "imageSelector": "a.anot_img img",
+            "hrefSelector": "div.article.clear-after a:first-of-type",
+            "contentSelector": "div.article.clear-after p",
+            "color": "#ffec00",
+            "link": "https://www.plzen.eu",
+            "text": "<@&1085704420660084836>",
+            "extras": {
+                "SELECTOR": "title"
+            }
+        },
+        {
+            "url": "https://www.plzen.eu/o-meste/aktuality/aktuality-z-obvodu/",
+            "previousTitle": "Strážníci kontrolovali psy a jejich majitele",
+            "titleSelector": "a.inverted.title",
+            "imageSelector": null,
+            "hrefSelector": "div.article.clear-after a:first-of-type",
+            " contentSelector": "div.article.clear-after p",
+            "color": "#ffec00",
+            "link": "",
+            "text": "<@&1085704420660084836>",
+            "extras": {
+                "authorSelector": "div.article.clear-after .author b",
+                "authorPrefix": "",
+                "obvody": {
+                    "1": "Mo1 - Severní Předměstí",
+                    "2": "Mo2 - Slovany",
+                    "3": "Mo3 - Centrum, Bory, Skvrňany",
+                    "4": "Mo4 - Doubravka",
+                    "5": "Mo5 - Křimice",
+                    "6": "Mo6 - Litice",
+                    "7": "Mo7 - Radčice",
+                    "8": "Mo8 - Černice",
+                    "9": "Mo9 - Malesice",
+                    "10": "Mo10 - Lhota"
+                },
+                "role_obvod": [
+                    "0",
+                    "1085721846630072491",
+                    "1085722035986120755",
+                    "1085722090885369916",
+                    "1085722137895112774",
+                    "1085722274998526073",
+                    "1085722324843630753",
+                    "1085722401947517029",
+                    "1085722462555218001",
+                    "1085722500241035316",
+                    "1085722551126343750"
+                ],
+                "SELECTOR": "title"
+            }
+        },
+        {
+            "url": "https://www.visitplzen.eu/mesicni-program/",
+            "previousTitle": "\n\t\t\t\t\t\t\t\t\t\t\t\tBLIK x BLIK Lovci znaků \n                                                \n                                                    \n                                                \n                                            ",
+            "titleSelector": "div.h2 h2",
+            "hrefSelector": "div.event__text h3 a",
+            "contentSelector": "div.event__text h3 a",
+            "contentSelector2": "span.event__date",
+            "color": "#ffec00",
+            "link": "https://www.visitplzen.eu",
+            "text": "<@&1085956144197009418>",
+            "extras": {
+                "SELECTOR": "content",
+                "TYPE": "LOOP"
+            }
+        }
+    ]
+}
