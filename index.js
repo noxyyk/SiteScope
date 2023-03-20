@@ -83,9 +83,8 @@ async function checkForChanges() {
                 content:
                     text +
                     " " +
-                    (author
-                        ? `<@&${extras.role_obvod[author.slice(-1)]}>`
-                        : ""),
+                    (!author
+                        ? "" : `<@&${extras.role_obvod[author.slice(-1)]}>`),
             }),
         })
         title += title + "\n"
